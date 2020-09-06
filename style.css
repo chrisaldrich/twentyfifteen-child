@@ -1,0 +1,892 @@
+/*
+Theme Name: Twenty Fifteen Child Theme
+Theme URI: http://boffosocko.com/publishing
+Author: Chris Aldrich
+Author URI: http://boffosocko.com
+Description: Child theme for Boffosocko.com; Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Template: twentyfifteen
+Version: 1.2.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../twentyfifteen/style.css');
+
+/* =Theme customization starts here. Add your own custom styles.
+-------------------------------------------------------------- */
+
+/* Removes the author bio section from posts to prevent redundancy*/
+.author-info {
+  display:none; 
+}
+
+/* Twitter response buttons */
+ul.relsyn{
+  list-style: none;
+  display: inline;
+}
+
+ul.relsyn > li{
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+/* Blogroll tweaks for images to show up properly */
+ul.xoxo.blogroll > li > a > img {
+    width: 30px;
+    height: 30px;
+}
+
+ul.xoxo.blogroll li{
+    list-style-type: none;
+}
+
+/* Blockquotes styles */
+blockquote.featured { 
+	background-color: #eee;
+  font-weight: 600;
+	font-style: italic;
+  line-height: 1.2em;
+	font-size: 1.4em;
+	margin: 10px 10px 10px 30px;
+	padding: 5px 10px 5px 10px;   
+}
+
+/* Don't like these for the 2015 theme
+blockquote.featured p:first-of-type:before {
+  content:"\201C";
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+blockquote.featured p:last-of-type:after {
+  content:"\201D";
+  font-size: 2.5rem;  
+  font-style: italic;		
+}
+*/
+
+.quote .source {
+  text-align: center;
+  font-size: 1.3rem;
+	font-weight: bold;
+	margin: -5px 10px 5px 10px;
+	padding: 5px 10px 10px 5px;
+}
+figcaption.source:before {
+  content: "— ";
+}
+
+blockquote.bookmark { 
+	background-color: #eee;
+	font-style: normal;		
+  border-left: 4px solid #ccc;
+	font-size: 0.9em;
+	margin: 30px 30px 5px 30px;
+	padding-left: 20px;               
+}
+
+blockquote.math { 
+	font-style: normal;		
+  border-left: 4px solid #ccc;
+	font-size: 0.9em;
+	margin: 30px 30px 5px 30px;
+	padding-left: 20px;               
+}
+
+blockquote.annotation { 
+	font-style: normal;		
+  border-left: 4px solid #ccc;
+	font-size: 0.9em;
+	margin: 30px 30px 5px 30px;
+	padding-left: 20px;     
+	background-color: #FFFF99;
+}
+
+blockquote.marginalia {
+	float: right;
+	width: 30%;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 0.65em;
+	margin: 5px -60px 10px 5px;
+} 
+
+blockquote.pull-quote {
+  margin: 0em 1em 1em 0em;
+  border-left: 3px solid #ccc;
+  padding: 0em 0em 0em .7em;
+}
+
+p.quote {
+/*    font-size: 1.76em;		*/
+/*    line-height: 1.22em; 		*/
+  color: rgba(58,103,141,1);
+  margin: .4em 2em .2em 2em;
+/*    font-weight: 600;                */
+  font-style: italic;
+}
+
+span.dropcap {
+  float: left;
+  color: #333;
+  font-size: 95px;
+  line-height: 60px;
+  padding: .126em .126em 0px .032em;
+}
+
+p.intro {
+  font-size: 1.35em;
+  line-height: 1.45em;
+  margin: 0px 0px .65em 0px;
+  font-family: "Open Sans","Lucida Grande", Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+p.indented {
+  text-indent: 2em;
+}
+
+.textwidget a img {
+	display: inline;
+}
+
+a.smblock img.smblock {
+	display: inline;
+}
+
+.entry-content a img {
+	display: inline;
+}
+
+/* Style for buttons to match the theme styling */
+.button {
+	background-color: #83b6cc;
+	border: 2px solid transparent;
+	border-radius: 2em;
+	color: #eff6f9;
+	display: inline-block;
+	font-family: Karla, Arial, sans-serif;
+	font-size: 15.2px;
+	font-size: 0.95rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 1;
+	padding: 1em 3em;
+	text-shadow: none;
+	transition: background-color 0.125s ease-in;
+	-webkit-appearance: none;
+}
+
+.button:hover {
+	background-color: transparent;
+	border-color: #83b6cc;
+	color: #83b6cc;
+}
+
+blockquote.pull-quote {
+  margin: 0em 1em 1em 0em;
+  border-left: 3px solid #ccc;
+  padding: 0em 0em 0em .7em;
+}
+
+p.quote {
+  font-size: 1.76em;
+  line-height: 1.22em;
+  color: rgba(58,103,141,1);
+  margin: .4em 2em .2em 2em;
+  font-family: "Open Sans","Lucida Grande", Arial, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+span.dropcap {
+  float: left;
+  color: #333;
+  font-size: 95px;
+  line-height: 60px;
+  padding: .126em .126em 0px .032em;
+}
+
+p.quote {
+  font-size: 1.76em;
+  line-height: 1.22em;
+  color: rgba(58,103,141,1);
+  margin: .4em 2em 1.6em 2em;
+  font-family: "Open Sans","Lucida Grande", Arial, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+blockquote.pull-quote {
+  margin: 0em 1em 1em 0em;
+  border-left: 3px solid #ccc;
+  padding: 0em 0em 0em .7em;
+  background-color: rgba(255,255,255,1);
+}
+
+blockquote.pull-quote-left {
+  width: 40%;
+  float: left;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-style: italic;
+  border-left: 3px solid #ccc;
+  margin: 0em 1em 0em 0em;
+  padding: 0em 0em 0em .7em;
+  color: rgba(249,151,52,1);
+  background-color: rgba(255,255,255,1);
+}
+
+h1.left-head-h1 {
+  float: left;
+  width: 40%;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  margin: 0px 1.682em .234em 0px;
+}
+
+/* Change the font for the text in the manual Webmention URL directions */
+#webmention-form {
+	margin-top: 1.875em;
+	font-size: 1.4rem;
+ }
+
+/* Make the Syndication Links replicate the font characteristics of JetPack */
+/* Set proper fonts for "Syndicated To" text */
+span.syn-text {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+/* Set proper fonts for "Syndicated To" text in comments*/
+div.comment-content > p > cite:before {
+  content: "— ";
+  font-size: 0.70rem;
+}
+
+div.comment-content > p > cite {
+  font-size: 0.70rem;
+}
+
+div.comment-content > p {
+	margin: 0 0 0.25em;
+}
+
+div.comment-content > p > span.syn-text:before{
+  content: "\00a0\00a0\00a0\00a0";
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 0.70rem;
+  font-weight: 400;
+}
+
+#book-review {
+	margin-bottom: 1.875em;
+}
+
+.format-chat span.chat1{ 
+	background-color: #eee;
+	font-style: normal;               
+}
+
+.format-chat span.chat2{ 
+	background-color: #ffdb99;
+	font-style: normal;              
+}
+
+.format-chat span.chat3{ 
+	background-color: #99bdff;
+	font-style: normal;              
+}
+
+.chat1{ 
+	background-color: #eee;
+	font-style: normal;               
+}
+
+.chat2{ 
+	background-color: #ffdb99;
+	font-style: normal;              
+}
+
+.chat3{ 
+	background-color: #99bdff;
+	font-style: normal;              
+}
+
+/* Hovercard CSS for Kevin Marks' /hovercard.js script for noterlive posts */
+.hovercard{
+	position: relative;
+}
+
+.hovercard .hidden-info{
+	opacity: 0;
+	max-height: 0;
+	max-width: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 1.5em;
+	left: 0;
+	z-index:1;
+}
+
+.hovercard:hover .hidden-info{
+	border: #999 solid 1px;
+	box-shadow: 0 0 1em #999;
+	padding: 0.5em;
+	background: #fcfcfc;
+	opacity: 1;
+	max-height: 20em;
+	max-width: 20em;
+}
+
+/* Reading Related posts */
+ul li.bookmark::before{
+	content: "🔖 ";
+	list-style-type: none;
+}
+
+ul li.bookstart::before{
+	content: "📗 ";
+}
+
+ul li.bookprogress::before{
+	content: "📖 ";
+}
+
+ul li.bookfinish::before{
+	content: "📕 ";
+}
+
+ul li.bookmark{
+	list-style-type: none;
+}
+
+ul li.bookstart{
+	list-style-type: none;
+}
+
+ul li.bookprogress{
+	list-style-type: none;
+}
+
+ul li.bookfinish{
+	list-style-type: none;
+}
+
+/* Custom layout for Instagram posts via DsgnWrksInstagram Importer */
+
+p.igfilter::before{
+	content: "📷 ";
+}
+
+p.igfilter{
+  font-size: 0.9em;
+  margin: 0 0 0.1em
+}
+
+p.iglocation::before{
+	content: "🗺 ";
+}
+
+p.iglocation{
+  font-size: 0.9em;
+  margin: 0 0 0.1em
+}
+
+p.screenLocation::before{
+	content: "🎦 ";
+}
+
+p.screenLocation {
+  font-size: 0.9em;
+  margin: 0 0 0.1em
+}
+
+p.seatLocation::before{
+	content: "💺 ";
+}
+
+p.seatLocation {
+  font-size: 0.9em;
+  margin: 0 0 0.1em
+}
+
+/* Styling for quoting books in book reviews started on September 16, 2016 */
+blockquote.kindle{ 
+	background-color: #eee;
+	font-style: normal;		
+  border-left: 4px solid #ccc;
+	font-size: 0.9em;
+	margin: 15px 30px 5px 30px;
+	padding-left: 20px;               
+}
+span.loc{
+	font-weight: bold;	
+	font-size: 0.75em;
+	margin: -1.25em 0 0 0;
+}
+span.note{
+	font-style: italic;
+	font-size: 0.75em;
+	margin: -1em 0 0 0;
+}
+
+/* Alternate styling for quoting books in book reviews started on 10-23-16 - This is closer to the Amazon Kindle desktop export set up, but roughly in line with the above version */
+.sectionHeading {
+  font-size: 1.429em;
+  font-weight: 700;
+  text-align: left;
+  margin: 1.714em 0  1.5em 0;
+  padding: 0em;
+}
+
+.noteHeading {
+  font-size: 0.75em;
+  font-weight: 500;
+  text-align: left;
+  padding: 0em;
+}
+
+.noteAnnotation {
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+.noteAnnotation::before {
+  content: "Annotation: ";
+}
+
+.noteText {
+  background-color: #eee;
+  border-left: 4px solid #ccc;
+  font-size: 0.9em;
+  font-style: normal;		
+  text-align: left;
+  margin: 25px 30px 5px 30px;
+  padding-left: 20px; 
+}
+
+.noteDate {
+  font-size: 0.9em;
+  font-style: italic;	
+}
+
+.highlight_blue {
+  color: rgb(0, 0, 255);
+}
+
+.highlight_orange {
+  color: rgb(255, 140, 0);
+}
+
+.highlight_pink {
+  color: rgb(255, 105, 180);
+}
+
+.highlight_yellow {
+  color: rgb(247, 206, 0);
+}
+
+.highlight_green {
+  color: rgb(0, 128, 0);
+}
+
+.highlight_red {
+  color: rgb(255, 0, 0);
+}
+
+.highlight_gray {
+  color: rgb(128, 128, 128);
+}
+
+ins {
+  border-left: 2px solid #007acc;
+  text-decoration: none;
+  margin: 10px 0px 10px -2px;
+}
+
+/* Flexbox details for small menu on front page and potentially on posts-by type page */
+.flex-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: space-between;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 150px;
+  height: 1.5em;
+  margin-top: 10px;
+  line-height: 1.5em;
+  color: black;
+  font-weight: bold;
+  font-size: 1.05em;
+  text-align: left;
+}
+
+/* Flexbox details for small social icons on boffosocko.com/about */
+.flex-about {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: space-between;
+}
+
+.flex-social {
+  padding: 0px;
+  width: 50px;
+  height: 60px;
+  margin: 10px 2px 10px 2px;
+  line-height: 60px;
+  text-align: left;
+}
+
+
+/* Makes the username of Recent comments widget bold */
+span.comment-author-link {
+  font-weight: bold;    
+}
+
+
+/* Tweaks to post kinds */
+#kind-all .svg-icon {
+  fill: currentColor;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+  top: -0.0625em;
+  color: grey;
+}
+
+.response .svg-icon {
+  fill: currentColor;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+  top: -0.0625em;
+  color: black;
+  display: inline-flex;
+}
+
+.response {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.response .kind-icon {
+  margin-right: 3px;
+}
+
+.response blockquote {
+  margin-left: 25px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+.response.u-annotation-of blockquote {
+  margin-left: 25px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #FFFF99;
+}
+
+.response.u-highlight-of blockquote {
+  margin-left: 25px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #FFFF99;
+}
+
+.response .u-url:link {
+  text-decoration: none;
+}
+
+.response .u-url:hover {
+  text-decoration: none;
+}
+
+.response .u-photo, .response .u-featured {
+  padding: 0;
+  margin: 2px;
+}
+
+ul.cites {
+  list-style: none;
+  display: inline;
+}
+
+.embeds {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Fix the thick bottom border in Post Kinds and make it thinner (or maybe non-existent) */
+/*--------------------------------------------------------------
+--------------------------------------------------------------*/
+#kind-all .svg-icon {
+  fill: currentColor;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  top: -0.0625em;
+  color: grey;
+}
+
+.response .svg-icon {
+  fill: currentColor;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  top: -0.0625em;
+  color: black;
+}
+
+.response {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border-bottom: none;
+}
+.response .kind-icon {
+  margin-right: 3px;
+}
+.response blockquote {
+  margin-left: 25px;
+}
+.response .u-url:link {
+  text-decoration: none;
+}
+.response .u-url:hover {
+  text-decoration: none;
+}
+.response .u-photo, .response .u-featured {
+  padding: 0;
+  margin: 2px;
+}
+
+ul.cites {
+  list-style: none;
+  display: inline;
+}
+
+.embeds {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=kind.css.map */
+
+/* Theme compat portion for Post Kinds (to remove titles from posts amongst other tweaks) */
+#kind-all .svg-icon{fill:currentColor;padding-left:2px;padding-right:2px;width:24px;height:24px;vertical-align:middle;top:-0.0625em;color:grey}
+
+.response .svg-icon{fill:currentColor;padding-left:2px;padding-right:2px;width:32px;height:32px;vertical-align:middle;top:-0.0625em;color:#000}
+
+.response{margin-bottom:10px;margin-top:10px;margin-left:20px;padding:5px;font-size:16px}
+
+/* .response{margin-bottom:10px;margin-top:10px;margin-left:20px;padding:5px;font-size:16px;border-bottom:inset #D6D6D6} */
+
+.response .kind-icon{margin-right:3px}
+
+.response blockquote{margin-left:25px}
+
+.response .u-url:link{text-decoration:none}
+
+.response .u-url:hover{text-decoration:none}
+
+.response .u-photo,.response .u-featured{padding:0;margin:2px}
+
+ul.cites{list-style:none;display:inline}
+
+.embeds{text-align:center;position:relative;width:100%;margin-top:5px}
+
+.kind-note .entry-title,.kind-bookmark .entry-title,.kind-reply .entry-title,.kind-like .entry-title,.kind-favorite .entry-title,.kind-photo .entry-title,.kind-tag .entry-title,.kind-rsvp .entry-title,.kind-listen .entry-title,.kind-watch .entry-title,.kind-checkin .entry-title,.kind-wish .entry-title,.kind-play .entry-title,.kind-weather .entry-title,.kind-exercise .entry-title,.kind-travel .entry-title,.kind-eat .entry-title,.kind-drink .entry-title,.kind-follow .entry-title,.kind-jam .entry-title,.kind-read .entry-title,.kind-quote .entry-title,.kind-annotation .entry-title,.kind-highlight .entry-title,.kind-acquisition .entry-title {display:none}
+
+
+/* CSS for Kartik Prabhu's Fragmentioner at https://github.com/kartikprabhu/fragmentioner */
+#fragmentioner-ui{
+ 	position:absolute;
+	top:-100%;
+ 	background: #666666;
+ 	padding:0.25em;
+}
+
+#fragmentioner-ui a{
+	color:#fafafa;
+}
+
+/* 7/16/18 Removing some of the post kind categories from the sidebar widget */
+li.cat-item.cat-item-4684 {
+	display: none;
+}
+
+li.cat-item.cat-item-5621 {
+	display: none;
+}
+
+li.cat-item.cat-item-964 {
+	display: none;
+}
+
+li.cat-item.cat-item-968 {
+	display: none;
+}
+
+li.cat-item.cat-item-4509 {
+	display: none;
+}
+
+li.cat-item.cat-item-4551 {
+	display: none;
+}
+
+li.cat-item.cat-item-4796 {
+	display: none;
+}
+
+li.cat-item.cat-item-1502{
+	display: none;
+}
+
+li.cat-item.cat-item-4430 {
+	display: none;
+}
+
+li.cat-item.cat-item-5731 {
+	display: none;
+}
+
+li.cat-item.cat-item-936 {
+	display: none;
+}
+
+li.cat-item.cat-item-4701 {
+	display: none;
+}
+
+li.cat-item.cat-item-5736 {
+	display: none;
+}
+
+li.cat-item.cat-item-1932 {
+	display: none;
+}
+
+li.cat-item.cat-item-486 {
+	display: none;
+}
+
+li.cat-item.cat-item-1382 {
+	display: none;
+}
+
+li.cat-item.cat-item-4461 {
+	display: none;
+}
+
+li.cat-item.cat-item-4538 {
+	display: none;
+}
+
+li.cat-item.cat-item-945 {
+	display: none;
+}
+
+li.cat-item.cat-item-485 {
+	display: none;
+}
+
+li.cat-item.cat-item-487 {
+	display: none;
+}
+
+li.cat-item.cat-item-488 {
+	display: none;
+}
+
+li.cat-item.cat-item-1477 {
+	display: none;
+}
+
+li.cat-item.cat-item-1404 {
+	display: none;
+}
+
+li.cat-item.cat-item-6767 {
+	display: none;
+}
+
+/* Make links with class="plain" be simple so that they don't distract but still send webmentions */
+.entry-summary a.plain,
+.entry-content a.plain {
+	color: #1a1a1a;
+  text-decoration: none;
+  box-shadow: 0 0px 0 0 currentColor;
+}
+
+.entry-summary a.plain:hover,
+.entry-content a.plain:hover,
+.entry-summary a.plain:active,
+.entry-content a.plain:active {
+  color: #686868;
+  box-shadow: 0 1px 0 0 currentColor;
+}
+
+/* Some code for making boxes around the responses a la Twitter cards or others 
+.response {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 16px;
+	border: 1px solid #000;
+  outline: 4px solid #007acc;
+} 
+
+.entry-content blockquote:not(.alignleft):not(.alignright), .entry-summary blockquote, .comment-content blockquote {
+  margin-left: 0;
+}
+
+*/
